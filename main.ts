@@ -9,6 +9,7 @@ const LINE =
   "The Roombas — hit single 'Suck It Up' swept the nation, then spent three weeks stuck under the couch.";
 
 // Gate-check the line before writing anything.
+// Each check rejects a shape the judge would reject: empty, too long, multi-line, or invalid UTF-8.
 if (typeof LINE !== "string" || LINE.length < 1 || LINE.length > 200) {
   throw new Error(`entry must be 1-200 characters, got ${LINE.length}`);
 }
